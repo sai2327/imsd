@@ -1,38 +1,63 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>HTML Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 30px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 2px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
 <body>
-<table border="2">
-<caption><h2  >CSE-6</h2></caption>
-<tr>
-<th>S.NO</th>
-<th>FIRST NAME</th>
-<th>LAST NAME</th>
-<th>E-MAIL ID</th>
-</tr>
-  <tr>
-     <td>1</td>
-      <td>krishna</td>
-      <td>bharadwaj</td>
-        <td>skb@123</td>
-    </tr>
-<tr>
-     <td>2</td>
-      <td>tanay</td>
-      <td>gandhi</td>
-        <td>tanay@420</td>
-    </tr>
-<tr>
-     <td>3</td>
-      <td>ganesh</td>
-      <td>vennapusa</td>
-        <td>vganesh@123</td>
-    </tr>
-<tr>
-     <td>4</td>
-      <td>surya</td>
-      <td>dileep</td>
-        <td>gsd@840</td>
-    </tr>
 
-</table>
+    <table>
+        <caption>Student Marks Table</caption>
+        <tr>
+            <th rowspan="2">S.No</th>
+            <th rowspan="2">Name</th>
+            <th colspan="3">Marks</th>
+        </tr>
+        <tr>
+            <th>Math</th>
+            <th>Science</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>85</td>
+            <td>90</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Alice</td>
+            <td>78</td>
+            <td>82</td>
+            <td>89</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>David</td>
+            <td colspan="3">Absent</td>
+        </tr>
+    </table>
+
 </body>
-<html>
+</html>
