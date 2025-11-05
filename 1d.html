@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thumbnail Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery a img {
+            border: 2px solid #555;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .gallery a img:hover {
+            transform: scale(1.1);
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thumbnail Image Gallery</h1>
+
+    <div class="gallery">
+        <!-- Image 1 -->
+        <a href="https://via.placeholder.com/600x400.png?text=Image+1" target="_blank">
+            <img src="one.jpg" alt="Image 1" width="100" height="100">
+        </a>
+
+        <!-- Image 2 -->
+        <a href="https://via.placeholder.com/600x400.png?text=Image+2" target="_blank">
+            <img src="two.jpg" alt="Image 2" width="100" height="100">
+        </a>
+
+        <!-- Image 3 -->
+        <a href="https://via.placeholder.com/600x400.png?text=Image+3" target="_blank">
+            <img src="one.jpg" alt="Image 3" width="100" height="100">
+        </a>
+
+        <!-- Image 4 -->
+        <a href="https://via.placeholder.com/600x400.png?text=Image+4" target="_blank">
+            <img src="two.jpg" alt="Image 4" width="100" height="100">
+        </a>
+
+        <!-- Image 5 -->
+        <a href="https://via.placeholder.com/600x400.png?text=Image+5" target="_blank">
+            <img src="one.jpg" alt="Image 5" width="100" height="100">
+        </a>
+    </div>
+
+</body>
+</html>
