@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript math operators</h2>
+    <pre id="output"></pre>
+    <script>
+        let out="";
+   //Airthmetic operators
+   let a=10,b=3;
+   out+="Airthmetic Operators:\n";
+   out+="a+b= " +(a+b)+"\n";
+   out+="a-b="+(a-b)+"\n";
+   out+="a*b = "+(a*b)+"\n";
+   out+="a/b= "+(a/b)+"\n";
+   out+="a%b = "+(a%b)+"\n";
+   out+="a**b="+(a**b)+"\n";
+   out+="++a="+(++a)+"\n";
+   out+="--b = "+(--b)+"\n";
+
+   //Assignment operators
+   let x=5;
+   out+="Assignment operators"
+   x+=2; out+="x+=2 --> "+x+"\n";
+   x-=3; out+="x-=3 -->"+x+"\n";
+   x*=4;out+="x*=4 -->"+x+"\n";
+   x/=2; out+="x/=2 -->"+x+"\n";
+   x%=3; out+="x%=3 -->"+x+"\n";
+   x**=2; out+="x**= 2-->"+x+"\n";
+
+    //  Comparison Operators
+    let p = 5, q = 8;
+    out += "Comparison Operators:\n";
+    out += "p > q -->" + (p > q) + "\n";
+    out += "p < q --> " + (p < q) + "\n";
+    out += "p >= 5 -->" + (p >= 5) + "\n";
+    out += "p <= 4 --> " + (p <= 4) + "\n";
+    out += "p == '5'--> " + (p == '5') + "\n";
+    out += "p === '5' --> " + (p === '5') + "\n";//it checks the type comparing number and string (false)
+    out += "p != 8 --> " + (p != 8) + "\n";
+    out += "p !== '5' -->" + (p !== '5') + "\n\n";
+     
+      //  Bitwise Operators
+    let m = 5, n = 3; // (5 = 0101, 3 = 0011 in binary)
+    out += "Bitwise Operators:\n";
+    out += "m & n = " + (m & n) + " (AND)\n";    // 1
+    out += "m | n = " + (m | n) + " (OR)\n";     // 7
+    out += "m ^ n = " + (m ^ n) + " (XOR)\n";    // 6
+    out += "~m = " + (~m) + " (NOT)\n";          // -6
+    out += "m << 1 = " + (m << 1) + " (Left Shift)\n";  // 10
+    out += "m >> 1 = " + (m >> 1) + " (Right Shift)\n"; // 2
+    out += "m >>> 1 = " + (m >>> 1) + " (Unsigned Right Shift)\n\n"; // 2
+    
+    
+    // Math Object - Basic
+    out += "Math Object (Basic):\n";
+    out += "Math.abs(-10) = " + Math.abs(-10) + "\n";
+    out += "Math.sqrt(49) = " + Math.sqrt(49) + "\n";
+    out += "Math.pow(2, 5) = " + Math.pow(2, 5) + "\n";
+    out += "Math.floor(4.9) = " + Math.floor(4.9) + "\n";
+    out += "Math.ceil(4.1) = " + Math.ceil(4.1) + "\n";
+    out += "Math.round(4.5) = " + Math.round(4.5) + "\n";
+    out += "Math.trunc(4.9) = " + Math.trunc(4.9) + "\n";
+    out += "Math.random() = " + Math.random() + "\n";
+    out += "Math.max(1,5,9) = " + Math.max(1,5,9) + "\n";
+    out += "Math.min(1,5,9) = " + Math.min(1,5,9) + "\n";
+    out += "Math.sign(-20) = " + Math.sign(-20) + "\n\n";
+
+    //Math Object- Advanced
+    out += "Math Object (Advanced):\n";
+    out += "Math.PI = " + Math.PI + "\n";
+    out += "Math.E = " + Math.E + "\n";
+    out += "Math.log(10) = " + Math.log(10) + " (Natural log)\n";
+    out += "Math.log10(100) = " + Math.log10(100) + " (Base-10 log)\n";
+    out += "Math.exp(2) = " + Math.exp(2) + " (e^2)\n";
+    out += "Math.sin(Math.PI/2) = " + Math.sin(Math.PI/2) + "\n";
+    out += "Math.cos(0) = " + Math.cos(0) + "\n";
+    out += "Math.tan(Math.PI/4) = " + Math.tan(Math.PI/4) + "\n";
+    out += "Math.asin(1) = " + Math.asin(1) + "\n";
+    out += "Math.acos(0) = " + Math.acos(0) + "\n";
+    out += "Math.atan(1) = " + Math.atan(1) + "\n";
+
+    document.getElementById("output").textContent=out;
+    </script>
+   
+</body>
+</html>

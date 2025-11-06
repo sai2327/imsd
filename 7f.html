@@ -1,36 +1,66 @@
-Program:
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>RegExp Object Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Date methods</title>
 </head>
 <body>
-<h2>Email Validation using RegExp Object</h2>
-<input type="text" id="email" placeholder="Enter email">
-<button onclick="validateEmail()">Validate</button>
-<p id="result"></p>
-<script>
-  function validateEmail() {
-    let input = document.getElementById("email").value;
-    // Regular Expression for email
-    let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
-    // Create a RegExp object
-    let regex = new RegExp(pattern);
-    // Use RegExp methods
-    let result = regex.test(input);  // returns true/false
-    let match = input.match(regex);  // returns match array or null
-    let execResult = regex.exec(input); // returns match result or null
-    // Using RegExp properties (after a match attempt)
-    document.getElementById("result").innerHTML = `
-      <strong>Validation Result:</strong> ${result ? "Valid Email ✅" : "Invalid Email ❌"}<br>
-      <strong>Match:</strong> ${match ? match[0] : "No match"}<br>
-      <strong>Exec Output:</strong> ${execResult ? execResult[0] : "No match"}<br>
-      <strong>RegExp Source:</strong> ${regex.source}<br>
-      <strong>Global Flag:</strong> ${regex.global}<br>
-      <strong>Ignore Case:</strong> ${regex.ignoreCase}<br>
-      <strong>Multiline:</strong> ${regex.multiline}
-    `;
-  }
-</script>
+    <h2>JavaScript DATE methods</h2>
+    <pre id="output"></pre>
+    <script>
+    let out="";
+
+    let now=new Date();
+    let specific=new Date("2025-09-03T10:30:00")
+    let fromMillis=new Date(0);
+
+     out += "Current Date & Time: " + now + "\n";
+    out += "Specific Date: " + specific + "\n";
+    out += "From Milliseconds (epoch): " + fromMillis + "\n\n";
+
+    //  Get methods
+    out += "Get Methods:\n";
+    out += "now.getFullYear() = " + now.getFullYear() + "\n";
+    out += "now.getMonth() = " + now.getMonth() + " (0=Jan)\n";
+    out += "now.getDate() = " + now.getDate() + "\n";
+    out += "now.getDay() = " + now.getDay() + " (0=Sun)\n";
+    out += "now.getHours() = " + now.getHours() + "\n";
+    out += "now.getMinutes() = " + now.getMinutes() + "\n";
+    out += "now.getSeconds() = " + now.getSeconds() + "\n";
+    out += "now.getMilliseconds() = " + now.getMilliseconds() + "\n";
+    out += "now.getTime() = " + now.getTime() + " (ms since 1970-01-01)\n";
+    out += "now.getTimezoneOffset() = " + now.getTimezoneOffset() + " (minutes)\n\n";
+
+    // Set methods
+    out += "Set Methods (example with specific date object):\n";
+    specific.setFullYear(2030);
+    specific.setMonth(11); // December (0-based)
+    specific.setDate(25);
+    specific.setHours(15);
+    specific.setMinutes(45);
+    specific.setSeconds(30);
+    specific.setMilliseconds(500);
+    out += "After setting: " + specific + "\n\n";
+
+    // Other useful Date methods
+    out += "Other Date Methods:\n";
+    out += "Date.now() = " + Date.now() + "\n"; // current timestamp in ms
+    out += "Date.parse('2025-09-03T10:30:00') = " + Date.parse("2025-09-03T10:30:00") + "\n"; // ms
+    out += "Date.UTC(2025,8,3,10,30,0) = " + Date.UTC(2025,8,3,10,30,0) + "\n"; // UTC ms
+
+    // String representations
+    out += "\nString Representations:\n";
+    out += "now.toDateString() = " + now.toDateString() + "\n";
+    out += "now.toTimeString() = " + now.toTimeString() + "\n";
+    out += "now.toUTCString() = " + now.toUTCString() + "\n";
+    out += "now.toISOString() = " + now.toISOString() + "\n";
+    out += "now.toJSON() = " + now.toJSON() + "\n";
+    out += "now.toLocaleDateString() = " + now.toLocaleDateString() + "\n";
+    out += "now.toLocaleTimeString() = " + now.toLocaleTimeString() + "\n";
+    
+    document.getElementById("output").innerText=out;
+
+    </script>
 </body>
 </html>

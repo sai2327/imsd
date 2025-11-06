@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudo-class Selectors Example</title>
+  <style>
+    /* :hover - changes color when mouse hovers */
+    a:hover {
+      color: red;
+    }
+
+    /* :first-child - styles first <li> in a list */
+    li:first-child {
+      font-weight: bold;
+    }
+
+    /* :last-child - styles last <li> in a list */
+    li:last-child {
+      color: green;
+    }
+
+    /* :nth-child(2) - styles second <li> */
+    li:nth-child(2) {
+      text-decoration: underline;
+    }
+
+    /* :focus - styles input when focused */
+    input:focus {
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo-class Selectors</h2>
+
+  <p>Hover over the <a href="#">link</a> to see the hover effect.</p>
+
+  <ul>
+    <li>First item (bold)</li>
+    <li>Second item (underlined)</li>
+    <li>Third item (green)</li>
+  </ul>
+
+  <p>Click inside the input box to see focus effect:</p>
+  <input type="text" placeholder="Focus me!">
+
+</body>
+</html>

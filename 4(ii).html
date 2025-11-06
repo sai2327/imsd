@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combinator Selectors Example</title>
+  <style>
+    /* Descendant selector: styles <span> inside any <div> */
+    div span {
+      color: blue;
+    }
+
+    /* Child selector: styles only direct <p> children of <div> */
+    div > p {
+      font-weight: bold;
+    }
+
+    /* Adjacent sibling selector: styles <p> immediately after <h2> */
+    h2 + p {
+      background-color: yellow;
+    }
+
+    /* General sibling selector: styles all <p> siblings after <h3> */
+    h3 ~ p {
+      color: green;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <span>This span is inside a div (descendant selector).</span>
+    <p>This paragraph is a direct child of div (child selector).</p>
+    <section>
+      <span>This span is inside a section inside div (descendant selector).</span>
+    </section>
+  </div>
+
+  <h2>Heading 2</h2>
+  <p>This paragraph immediately follows the h2 (adjacent sibling selector).</p>
+  <p>This paragraph also follows the h2 but is not adjacent.</p>
+
+  <h3>Heading 3</h3>
+  <p>This paragraph is a sibling after h3 (general sibling selector).</p>
+  <p>Another sibling paragraph after h3 (general sibling selector).</p>
+
+</body>
+</html>

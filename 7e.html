@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript string methods</title>
+</head>
+<body>
+    <h1>Javascript string methods</h1>
+    <pre id="output"></pre>
+    <script>
+        let out="";
+        
+    let str = "  Hello World!  ";
+    let str2 = "JavaScript";
+    let str3 = "hello world";
+
+
+        out+="original string "+str+"\n";
+
+        //length
+        out+="length: "+str.length+"\n";
+        //Access character
+        out+="s1[0] "+str[0]+"\n";
+        out+="s.charAt(0): "+str.charAt(0)+"\n";
+
+        //case conversion
+        out+="s.toUpperCase(): " +str.toUpperCase()+"\n";
+        out+="s.toLowerCase():"+ str.toLowerCase()+"\n";
+
+        //trim
+        out+="s1.trim()== "+str.trim()+"\n";
+        out+="s1.trimstart()== "+str.trimStart+"\n";
+        out+="s1.trimend()== "+str.trimEnd+"\n";
+
+        
+        // Slice / Substring / Substr
+    out += "s1.slice(2, 7) = " + str.slice(2, 7) + "\n";
+    out += "s1.substring(2, 7) = " + str.substring(2, 7) + "\n";
+    out += "s1.substr(2, 5) = " + str.substr(2, 5) + "\n";
+     
+       //Replace
+       out += "str.replace('World', 'JS') = " + str.replace('World','JS') + "\n";
+       
+         //  Includes / StartsWith / EndsWith
+    out += "str.includes('Hello') = " + str.includes('Hello') + "\n";
+    out += "str.startsWith('  He') = " + str.startsWith('  He') + "\n";
+    out += "str.endsWith('!  ') = " + str.endsWith('!  ') + "\n";
+
+       //  IndexOf / LastIndexOf
+    out += "str.indexOf('o') = " + str.indexOf('o') + "\n";
+    out += "str.lastIndexOf('o') = " + str.lastIndexOf('o') + "\n";
+
+     //  Search (regex)
+    out += "str.search(/World/) = " + str.search(/World/) + "\n";
+
+    //  Match (regex)
+    out += "str.match(/o/g) = " + str.match(/o/g) + "\n";
+
+    // Repeat
+    out += "str2.repeat(2) = " + str2.repeat(2) + "\n";
+
+    // Split
+    out += "str2.split('a') = " + str2.split('a') + "\n";
+    
+     //  Pad
+    out += "'5'.padStart(3,'0') = " + '5'.padStart(3,'0') + "\n";
+    out += "'5'.padEnd(3,'0') = " + '5'.padEnd(3,'0') + "\n";
+
+    //  CharCode
+    out += "str.charCodeAt(0) = " + str.charCodeAt(0) + "\n";
+    out += "String.fromCharCode(72,101,108,108,111) = " + String.fromCharCode(72,101,108,108,111) + "\n";
+
+    //  Locale Compare
+    out += "str.localeCompare(str3) = " + str.localeCompare(str3) + "\n";
+
+    //  Raw string
+    out += "String.raw`Hello\\nWorld` = " + String.raw`Hello\nWorld` + "\n";
+
+    //  valueOf / toString
+    out += "str.valueOf() = " + str.valueOf() + "\n";
+    out += "str.toString() = " + str.toString() + "\n";
+
+    document.getElementById("output").innerText=out;
+    </script>
+</body>
+</html>

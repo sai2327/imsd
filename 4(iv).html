@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pseudo-element Selectors Example</title>
+  <style>
+    /* ::before - adds content before the paragraph */
+    p::before {
+           color: blue;
+      font-weight: bold;
+    }
+
+    /* ::after - adds content after the paragraph */
+    p::after {
+          color: red;
+      font-weight: bold;
+    }
+
+    /* ::first-letter - styles the first letter of a paragraph */
+    p::first-letter {
+      font-size: 2em;
+      color: green;
+      font-weight: bold;
+    }
+
+    /* ::first-line - styles the first line of a paragraph */
+    p::first-line {
+      font-style: italic;
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo-element Selectors</h2>
+
+  <p>This paragraph demonstrates ::before, ::after, ::first-letter, and ::first-line pseudo-elements.</p>
+
+</body>
+</html>

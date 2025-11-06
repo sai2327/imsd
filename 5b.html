@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 2000px; /* So you can scroll */
+      background-image: url('one.jpg');
+      background-repeat: no-repeat;
+      background-position: center 50%;   /* halfway down */
+      background-attachment: fixed;      /* stays in place when scrolling */
+      background-size: 800px 400px;      /* optional sizing */
+      transform: scaleX(-1);             /* flips the whole body */
+    }
+
+    /* Flip the content back to normal */
+    body * {
+      transform: scaleX(-1);
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a flipped background image halfway down the page</h1>
+  <p>Scroll down and see that the image stays fixed and mirrored.</p>
+</body>
+</html>

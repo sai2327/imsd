@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  var a = [10,20,30,40,50];
+
+  document.write("Original: " + a + "<br>");
+  document.write("Length: " + a.length + "<br><br>");
+
+  // 🔹 Adding / Removing
+  a.push(60);
+  document.write("push(60): " + a + "<br>");
+
+  a.pop();
+  document.write("pop(): " + a + "<br>");
+
+  a.unshift(5);
+  document.write("unshift(5): " + a + "<br>");
+
+  a.shift();
+  document.write("shift(): " + a + "<br>");
+
+  a.splice(2,1,99); // replace element
+  document.write("splice(2,1,99): " + a + "<br>");
+
+  document.write("slice(1,4): " + a.slice(1,4) + "<br><br>");
+
+  //  Accessing
+  document.write("at(2): " + a.at(2) + "<br>");
+  document.write("indexOf(40): " + a.indexOf(40) + "<br>");
+  document.write("lastIndexOf(50): " + a.lastIndexOf(50) + "<br>");
+  document.write("includes(20): " + a.includes(20) + "<br>");
+  document.write("find(x>30): " + a.find(x => x > 30) + "<br>");
+  document.write("findIndex(x>30): " + a.findIndex(x => x > 30) + "<br>");
+  document.write("findLast(x>30): " + a.findLast(x => x > 30) + "<br>");
+  document.write("findLastIndex(x>30): " + a.findLastIndex(x => x > 30) + "<br><br>");
+
+  // Iteration & Transformation
+  a.forEach(x => document.write("forEach → " + x + "<br>"));
+  document.write("map(x*2): " + a.map(x => x*2) + "<br>");
+  document.write("filter(x>20): " + a.filter(x => x>20) + "<br>");
+  document.write("reduce(sum): " + a.reduce((s,v)=>s+v,0) + "<br>");
+  document.write("reduceRight(sum): " + a.reduceRight((s,v)=>s+v,0) + "<br>");
+  document.write("every(x>0): " + a.every(x => x>0) + "<br>");
+  document.write("some(x>40): " + a.some(x => x>40) + "<br><br>");
+
+  // Sorting & Reordering
+  document.write("sort: " + a.sort((x,y)=>x-y) + "<br>");
+  document.write("reverse: " + a.reverse() + "<br>");
+  document.write("toSorted: " + a.toSorted((x,y)=>x-y) + "<br>");
+  document.write("toReversed: " + a.toReversed() + "<br>");
+  document.write("toSpliced(2,1,77): " + a.toSpliced(2,1,77) + "<br>");
+  document.write("with(1,999): " + a.with(1,999) + "<br><br>");
+
+  //  Joining & Converting
+  document.write("join('-'): " + a.join('-') + "<br>");
+  document.write("toString(): " + a.toString() + "<br>");
+  document.write("toLocaleString(): " + a.toLocaleString() + "<br><br>");
+
+  // Copying / Filling
+  document.write("concat: " + a.concat([111,222]) + "<br>");
+  document.write("copyWithin(1,3,5): " + a.copyWithin(1,3,5) + "<br>");
+  document.write("fill(0,2,4): " + a.fill(0,2,4) + "<br>");
+  document.write("flat(1): " + [[1,2],[3,4]].flat() + "<br>");
+  document.write("flatMap: " + [1,2,3].flatMap(x => [x, x*2]) + "<br><br>");
+
+  //  Utility
+  document.write("length: " + a.length + "<br>");
+  document.write("Array.isArray(a): " + Array.isArray(a) + "<br>");
+  document.write("keys(): " + [...a.keys()] + "<br>");
+  document.write("values(): " + [...a.values()] + "<br>");
+  document.write("entries(): " + [...a.entries()] + "<br>");
+</script>
+</body>
+</html>
